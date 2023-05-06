@@ -86,37 +86,11 @@
                         @Html.ActionLink("Home", "Index", "Home")
                     </li>
                     <li>
-                        @Html.ActionLink("Products", "Index", "Shop")    @*tên thư mục, action, controller name*@
+                        @Html.ActionLink("Products", "Index", "Shop")
                     </li>
                     @Html.Partial("_NhaSanXuat", MobileShop.Models.BUS.NhaSanXuatBUS.DanhSach())
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mobiles &amp; Tablet</a>
-                        <div class="dropdown-menu" style="margin-left: -203.625px;">
-                            <div class="dropdown-inner">
-                                <ul class="list-unstyled">
-                                    <li><a href="category.html">Iphone</a></li>
-                                    <li><a href="category.html">Samsung</a></li>
-                                    <li><a href="category.html">Nokia</a></li>
-                                    <li><a href="category.html">Lenovo</a></li>
-                                    <li><a href="category.html">Google</a></li>
-                                </ul>
-                                <ul class="list-unstyled">
-                                    <li><a href="category.html">Nexus</a></li>
-                                    <li><a href="category.html">Dell</a></li>
-                                    <li><a href="category.html">Oppo</a></li>
-                                    <li><a href="category.html">Blackberry</a></li>
-                                    <li><a href="category.html">HTC</a></li>
-                                </ul>
-                                <ul class="list-unstyled">
-                                    <li><a href="category.html">LG</a></li>
-                                    <li><a href="category.html">Q-Mobiles</a></li>
-                                    <li><a href="category.html">Sony</a></li>
-                                    <li><a href="category.html">Wiko</a></li>
-                                    <li><a href="category.html">T&T</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
+                    @Html.Partial("_LoaiSanPham", MobileShop.Models.BUS.LoaiSanPhamBUS.DanhSach())
+                    
                     <li><a href="category.html">Software</a></li>
                 </ul>
             </div>
