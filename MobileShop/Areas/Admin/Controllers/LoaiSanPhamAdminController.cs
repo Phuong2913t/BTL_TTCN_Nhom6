@@ -6,27 +6,27 @@ using System.Web.Mvc;
 
 namespace MobileShop.Areas.Admin.Controllers
 {
-    public class SanPhamController : Controller
+    public class LoaiSanPhamAdminController : Controller
     {
-        // GET: Admin/SanPham
+        // GET: Admin/LoaiSanPhamAdmin
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Admin/SanPham/Details/5
+        // GET: Admin/LoaiSanPhamAdmin/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Admin/SanPham/Create
+        // GET: Admin/LoaiSanPhamAdmin/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/SanPham/Create
+        // POST: Admin/LoaiSanPhamAdmin/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +42,13 @@ namespace MobileShop.Areas.Admin.Controllers
             }
         }
 
-        // GET: Admin/SanPham/Edit/5
+        // GET: Admin/LoaiSanPhamAdmin/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Admin/SanPham/Edit/5
+        // POST: Admin/LoaiSanPhamAdmin/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +64,13 @@ namespace MobileShop.Areas.Admin.Controllers
             }
         }
 
-        // GET: Admin/SanPham/Delete/5
+        // GET: Admin/LoaiSanPhamAdmin/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Admin/SanPham/Delete/5
+        // POST: Admin/LoaiSanPhamAdmin/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

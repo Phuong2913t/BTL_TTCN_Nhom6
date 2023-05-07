@@ -6,27 +6,27 @@ using System.Web.Mvc;
 
 namespace MobileShop.Areas.Admin.Controllers
 {
-    public class NhaSanXuatController : Controller
+    public class NhaSanXuatAdminController : Controller
     {
-        // GET: Admin/NhaSanXuat
+        // GET: Admin/NhaSanXuatAdmin
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Admin/NhaSanXuat/Details/5
+        // GET: Admin/NhaSanXuatAdmin/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Admin/NhaSanXuat/Create
+        // GET: Admin/NhaSanXuatAdmin/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/NhaSanXuat/Create
+        // POST: Admin/NhaSanXuatAdmin/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +42,13 @@ namespace MobileShop.Areas.Admin.Controllers
             }
         }
 
-        // GET: Admin/NhaSanXuat/Edit/5
+        // GET: Admin/NhaSanXuatAdmin/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Admin/NhaSanXuat/Edit/5
+        // POST: Admin/NhaSanXuatAdmin/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +64,13 @@ namespace MobileShop.Areas.Admin.Controllers
             }
         }
 
-        // GET: Admin/NhaSanXuat/Delete/5
+        // GET: Admin/NhaSanXuatAdmin/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Admin/NhaSanXuat/Delete/5
+        // POST: Admin/NhaSanXuatAdmin/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
