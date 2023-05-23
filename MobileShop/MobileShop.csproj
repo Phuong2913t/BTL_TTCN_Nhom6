@@ -175,8 +175,12 @@
     <Content Include="Asset\images\6.jpg" />
     <Content Include="Asset\images\7.jpg" />
     <Content Include="Asset\images\8.jpg" />
+    <Content Include="Asset\images\Add.png" />
+    <Content Include="Asset\images\AddProduct.jpg" />
     <Content Include="Asset\images\close.png" />
+    <Content Include="Asset\images\Delete.png" />
     <Content Include="Asset\images\discover-curved-32px.png" />
+    <Content Include="Asset\images\EditIcon.png" />
     <Content Include="Asset\images\loading.gif" />
     <Content Include="Asset\images\logo.png" />
     <Content Include="Asset\images\logofooter.png" />
@@ -290,6 +294,7 @@
     <Content Include="Areas\Admin\Views\NhaSanXuatAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiSanPhamAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\SanPhamAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaSanXuatAdmin\Create.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
