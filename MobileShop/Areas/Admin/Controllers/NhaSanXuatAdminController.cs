@@ -13,7 +13,7 @@ namespace MobileShop.Areas.Admin.Controllers
         // GET: Admin/NhaSanXuatAdmin
         public ActionResult Index()
         {
-            var ds = NhaSanXuatBUS.DanhSach();
+            var ds = NhaSanXuatBUS.DanhSachAdmin();
             return View(ds);
         }
 
@@ -46,19 +46,19 @@ namespace MobileShop.Areas.Admin.Controllers
         }
 
         // GET: Admin/NhaSanXuatAdmin/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(String id)
         {
-            return View();
+            return View(NhaSanXuatBUS.ChiTietAdmin(id));
         }
 
         // POST: Admin/NhaSanXuatAdmin/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(String id, NhaSanXuat nsx)
         {
             try
             {
                 // TODO: Add update logic here
-
+                NhaSanXuatBUS.UpdateNSX(id, nsx);
                 return RedirectToAction("Index");
             }
             catch
@@ -75,7 +75,7 @@ namespace MobileShop.Areas.Admin.Controllers
 
         // POST: Admin/NhaSanXuatAdmin/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(String id, NhaSanXuat nsx)
         {
             try
             {
