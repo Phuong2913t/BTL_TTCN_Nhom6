@@ -12,7 +12,7 @@ namespace MobileShop.Models.BUS
         public static IEnumerable<LoaiSanPham> DanhSach()
         {
             var db = new ShopOnlineConnectionDB();
-            return db.Query<LoaiSanPham>("Select * from LoaiSanPham where TinhTrang = 0");
+            return db.Query<LoaiSanPham>("Select * from LoaiSanPham where TinhTrang = '0'");
         }
         public static IEnumerable<SanPham> ChiTiet(String id)
         {

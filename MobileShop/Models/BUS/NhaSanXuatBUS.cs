@@ -11,7 +11,7 @@ namespace MobileShop.Models.BUS
         public static IEnumerable<NhaSanXuat> DanhSach()
         {
             var db = new ShopOnlineConnectionDB();
-            return db.Query<NhaSanXuat>("Select * from NhaSanXuat where TinhTrang = 0");
+            return db.Query<NhaSanXuat>("Select * from NhaSanXuat where TinhTrang = '0'");
         }
         public static IEnumerable<NhaSanXuat> DanhSachAdmin()
         {

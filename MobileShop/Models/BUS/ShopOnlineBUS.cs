@@ -11,7 +11,7 @@ namespace MobileShop.Models.BUS
         public static IEnumerable<SanPham> DanhSach()
         {
             var db = new ShopOnlineConnectionDB();
-            return db.Query<SanPham>("Select * from SanPham where TinhTrang = 0");
+            return db.Query<SanPham>("Select * from SanPham where TinhTrang = '0'");
         }
         public static SanPham Describe(String a)
         {
@@ -27,6 +27,11 @@ namespace MobileShop.Models.BUS
         {
             var db = new ShopOnlineConnectionDB();
             db.Insert(sp);
+        }
+        public static void UpdateSP(String id, SanPham sp)
+        {
+            var db = new ShopOnlineConnectionDB();
+            db.Update(id, sp);
         }
     }
 }

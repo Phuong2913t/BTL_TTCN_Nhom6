@@ -78,6 +78,9 @@ namespace MobileShop.Areas.Admin.Controllers
                     hpf.SaveAs(Server.MapPath(fullPathWithFileName));
                     sp.Hinh4 = sp.MaSanPham + "_4.png";
                 }
+                sp.SoLuongDaBan = 0;
+                sp.LuotView = 0;
+                sp.TinhTrang = "0";
                 ShopOnlineBUS.ThemSP(sp);
                 return RedirectToAction("Index");
             }
@@ -88,19 +91,65 @@ namespace MobileShop.Areas.Admin.Controllers
         }
 
         // GET: Admin/SanPhamAdmin/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(String id)
         {
-            return View();
+            ViewBag.MaLoaiSanPham = new SelectList(LoaiSanPhamBUS.DanhSach(), "MaLoaiSanPham", "TenloaiSanPham", ShopOnlineBUS.Describe(id).MaLoaiSanPham);
+            ViewBag.MaNhaSanXuat = new SelectList(NhaSanXuatBUS.DanhSach(), "MaNhaSanXuat", "TenNhaSanXuat", ShopOnlineBUS.Describe(id).MaNhaSanXuat);
+            return View(ShopOnlineBUS.Describe(id));
         }
 
         // POST: Admin/SanPhamAdmin/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateInput(false)]
+        public ActionResult Edit(String id, SanPham sp)
         {
             try
             {
                 // TODO: Add update logic here
-
+                var hpf = HttpContext.Request.Files[0];
+                if (hpf.ContentLength > 0)
+                {
+                    string fileName = sp.MaSanPham;
+                    string fullPathWithFileName = "~/Asset/img/" + fileName + ".png";
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    sp.HinhChinh = sp.MaSanPham + ".png";
+                }
+                hpf = HttpContext.Request.Files[1];
+                if (hpf.ContentLength > 0)
+                {
+                    string fileName = sp.MaSanPham;
+                    string fullPathWithFileName = "~/Asset/img/" + fileName + "_1.png";
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    sp.Hinh1 = sp.MaSanPham + "_1.png";
+                }
+                hpf = HttpContext.Request.Files[2];
+                if (hpf.ContentLength > 0)
+                {
+                    string fileName = sp.MaSanPham;
+                    string fullPathWithFileName = "~/Asset/img/" + fileName + "_2.png";
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    sp.Hinh2 = sp.MaSanPham + "_2.png";
+                }
+                hpf = HttpContext.Request.Files[3];
+                if (hpf.ContentLength > 0)
+                {
+                    string fileName = sp.MaSanPham;
+                    string fullPathWithFileName = "~/Asset/img/" + fileName + "_3.png";
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    sp.Hinh3 = sp.MaSanPham + "_3.png";
+                }
+                hpf = HttpContext.Request.Files[4];
+                if (hpf.ContentLength > 0)
+                {
+                    string fileName = sp.MaSanPham;
+                    string fullPathWithFileName = "~/Asset/img/" + fileName + "_4.png";
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    sp.Hinh4 = sp.MaSanPham + "_4.png";
+                }
+                sp.SoLuongDaBan = 0;
+                sp.LuotView = 0;
+                sp.TinhTrang = "0";
+                ShopOnlineBUS.UpdateSP(id, sp);
                 return RedirectToAction("Index");
             }
             catch

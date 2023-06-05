@@ -159,8 +159,8 @@ C:\Users\pc\Desktop\BTL_TTCN_Nhom6\MobileShop\bin\System.Web.WebPages.Razor.xml
 C:\Users\pc\Desktop\BTL_TTCN_Nhom6\MobileShop\bin\Newtonsoft.Json.xml
 C:\Users\pc\Desktop\BTL_TTCN_Nhom6\MobileShop\bin\Antlr3.Runtime.pdb
 C:\Users\pc\Desktop\BTL_TTCN_Nhom6\MobileShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\pc\Desktop\BTL_TTCN_Nhom6\MobileShop\obj\Debug\MobileShop.csproj.AssemblyReference.cache
 C:\Users\pc\Desktop\BTL_TTCN_Nhom6\MobileShop\obj\Debug\MobileShop.csproj.CoreCompileInputs.cache
 C:\Users\pc\Desktop\BTL_TTCN_Nhom6\MobileShop\obj\Debug\MobileShop.csproj.CopyComplete
 C:\Users\pc\Desktop\BTL_TTCN_Nhom6\MobileShop\obj\Debug\MobileShop.dll
 C:\Users\pc\Desktop\BTL_TTCN_Nhom6\MobileShop\obj\Debug\MobileShop.pdb
+C:\Users\pc\Desktop\BTL_TTCN_Nhom6\MobileShop\obj\Debug\MobileShop.csproj.AssemblyReference.cache

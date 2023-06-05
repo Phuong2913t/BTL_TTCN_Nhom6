@@ -620,6 +620,11 @@
     <Content Include="Asset\images\sub-banner5.png" />
     <Content Include="Asset\images\visa-curved-32px.png" />
     <Content Include="Asset\images\Z1.png" />
+    <Content Include="Asset\img\SP01.png" />
+    <Content Include="Asset\img\SP01_1.png" />
+    <Content Include="Asset\img\SP01_2.png" />
+    <Content Include="Asset\img\SP01_3.png" />
+    <Content Include="Asset\img\SP01_4.png" />
     <Content Include="Asset\js\bootstrap.min.js" />
     <Content Include="Asset\js\html5shiv.js" />
     <Content Include="Asset\js\jquery-2.1.1.js" />
@@ -752,6 +757,7 @@
     <Content Include="Areas\AssetAdmin\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Areas\AssetAdmin\ckeditor\SECURITY.md" />
     <Content Include="Areas\AssetAdmin\ckeditor\skins\moono-lisa\readme.md" />
+    <Content Include="Areas\Admin\Views\SanPhamAdmin\Edit.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -783,14 +789,13 @@
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_NhaSanXuat.cshtml" />
-    <Content Include="Views\NhaSanXuat\Index.cshtml" />
     <Content Include="Views\Shared\_LoaiSanPham.cshtml" />
     <Content Include="Views\LoaiSanPham\Index.cshtml" />
+    <Content Include="Views\NhaSanXuat\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Asset\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
