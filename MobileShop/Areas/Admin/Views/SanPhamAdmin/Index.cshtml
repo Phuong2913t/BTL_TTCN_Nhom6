@@ -1,8 +1,62 @@
-﻿
+﻿@model IEnumerable<ShopOnlineConnection.SanPham>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
 }
+uản lý sản phẩm</h2>
 
-<h2>Index cua trang san pham</h2>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: auto;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #5d5e63
+    }
+
+    th {
+        background-color: #2a9fd6;
+        color: white;
+    }
+
+    table img {
+        width: 20px;
+        height: 20px;
+    }
+</style>
+<h2>Quản lý nhà sản xuất</h2>
+
+<table>
+    <tr>
+        <th>Mã sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Hình ảnh</th>
+        <th>Tình trạng</th>
+        <th colspan="2">
+            <a href="@Url.Action("Create", "SanPhamAdmin")"><img src="~/Asset/images/Add.png" style="margin-left: 25%;" /></a>
+        </th>
+    </tr>
+    @{
+        foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.MaSanPham</td>
+            <td>@item.TenSanPham</td>
+            <td><img src="~/Asset/img/@item.HinhChinh" alt="Ảnh" style="width: 50px; height: 50px;" /></td>
+            <td>@item.TinhTrang</td>
+            <td><a href="@Url.Action("Edit","SanPhamAdmin", new { id = item.MaSanPham })"><img src="~/Asset/images/EditIcon.png" /></a></td>
+            <td><a href="#"><img src="~/Asset/images/Delete.png" /></a></td>
+        </tr>
+        }
+    }
+
+
+</table>
 

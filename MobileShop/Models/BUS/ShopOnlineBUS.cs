@@ -18,5 +18,15 @@ namespace MobileShop.Models.BUS
             var db = new ShopOnlineConnectionDB();
             return db.SingleOrDefault<SanPham>("Select * from SanPham where MaSanPham = @0", a);
         }
+        public static IEnumerable<SanPham> DanhSachSP()
+        {
+            var db = new ShopOnlineConnectionDB();
+            return db.Query<SanPham>("Select * from SanPham");
+        }
+        public static void ThemSP(SanPham sp)
+        {
+            var db = new ShopOnlineConnectionDB();
+            db.Insert(sp);
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MobileShop.Models.BUS;
+using ShopOnlineConnection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,7 @@ namespace MobileShop.Areas.Admin.Controllers
         // GET: Admin/SanPhamAdmin
         public ActionResult Index()
         {
-            return View();
+            return View(ShopOnlineBUS.DanhSachSP());
         }
 
         // GET: Admin/SanPhamAdmin/Details/5
@@ -23,17 +25,60 @@ namespace MobileShop.Areas.Admin.Controllers
         // GET: Admin/SanPhamAdmin/Create
         public ActionResult Create()
         {
+            ViewBag.MaLoaiSanPham = new SelectList(LoaiSanPhamBUS.DanhSach(), "MaLoaiSanPham", "TenloaiSanPham");
+            ViewBag.MaNhaSanXuat = new SelectList(NhaSanXuatBUS.DanhSach(), "MaNhaSanXuat", "TenNhaSanXuat");
             return View();
         }
 
         // POST: Admin/SanPhamAdmin/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateInput(false)]
+        public ActionResult Create(SanPham sp)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                var hpf = HttpContext.Request.Files[0];
+                if(hpf.ContentLength > 0)
+                {
+                    string fileName = sp.MaSanPham;
+                    string fullPathWithFileName = "~/Asset/img/" + fileName + ".png";
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    sp.HinhChinh = sp.MaSanPham + ".png";
+                }
+                hpf = HttpContext.Request.Files[1];
+                if (hpf.ContentLength > 0)
+                {
+                    string fileName = sp.MaSanPham;
+                    string fullPathWithFileName = "~/Asset/img/" + fileName + "_1.png";
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    sp.Hinh1 = sp.MaSanPham + "_1.png";
+                }
+                hpf = HttpContext.Request.Files[2];
+                if (hpf.ContentLength > 0)
+                {
+                    string fileName = sp.MaSanPham;
+                    string fullPathWithFileName = "~/Asset/img/" + fileName + "_2.png";
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    sp.Hinh2 = sp.MaSanPham + "_2.png";
+                }
+                hpf = HttpContext.Request.Files[3];
+                if (hpf.ContentLength > 0)
+                {
+                    string fileName = sp.MaSanPham;
+                    string fullPathWithFileName = "~/Asset/img/" + fileName + "_3.png";
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    sp.Hinh3 = sp.MaSanPham + "_3.png";
+                }
+                hpf = HttpContext.Request.Files[4];
+                if (hpf.ContentLength > 0)
+                {
+                    string fileName = sp.MaSanPham;
+                    string fullPathWithFileName = "~/Asset/img/" + fileName + "_4.png";
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    sp.Hinh4 = sp.MaSanPham + "_4.png";
+                }
+                ShopOnlineBUS.ThemSP(sp);
                 return RedirectToAction("Index");
             }
             catch
